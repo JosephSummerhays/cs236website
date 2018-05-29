@@ -1,0 +1,43 @@
+:root {
+  --backColor:#d2dbd6;
+  --tint1:#e11f46;
+  --tint2:#8fcfd6;
+  --tint3:#040730;
+  --numMenuItems:9;
+}
+
+body {
+  margin:0px;
+}
+/*Strip the ul of padding and list styling*/
+nav {
+   display: grid;
+   float: left;
+   padding: 15px;
+   width:100%;
+   background-color: var(--tint2)
+}
+nav ul {
+   list-style-type:none;
+   padding:0;
+   margin:0;
+}
+
+/*Create a horizontal list with spacing*/
+nav li {
+   display:inline-block;
+   margin:auto;
+   width:calc(100%/var(--numMenuItems));
+   text-align: center;
+}
+
+/*Hover state for top level links*/
+nav li:hover a {
+  text-decoration-color: white;
+}
+/*****************Main page***************/
+section {
+  border: 1px blue;
+  margin:auto;
+  width:66%;
+}
