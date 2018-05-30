@@ -4,6 +4,7 @@
   --tint2:#8fcfd6;
   --tint3:#040730;
   --numMenuItems:9;
+  --pads:7px;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
 /*Strip the ul of padding and list styling*/
 nav {
    display: grid;
-   float: left;
    padding: 15px;
    width:100%;
    background-color: var(--tint2)
@@ -37,7 +37,18 @@ nav li:hover a {
 }
 /*****************Main page***************/
 section {
-  border: 1px blue;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--tint3);
   margin:auto;
+  margin-top:20px;
   width:66%;
+}
+
+h1.title {
+  width: calc(100%-2*var(--pads));
+  padding: var(--pads);
+  background-color: var(--tint2);
+  margin:0px;
+  text-align: center;
 }

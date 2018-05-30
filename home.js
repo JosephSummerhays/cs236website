@@ -4,5 +4,25 @@ var home = Vue.component('home', {
       //?????
     }
   },
-  template: `<h1>This will be the home</h1>`
+  template: `
+  <div>
+    <p>
+    On behalf of the faculty, welcome to CS 236 Discrete Structures.
+      Most everything you need to get started with the course is found
+      in the <i>course details</i> menu on the left of the page.
+      The recommended starting point is the
+      <a href="/cs-236/syllabus" class="wikilink1" title="cs-236:syllabus">Syllabus</a>
+      followed by the <a href="/cs-236/schedule" class="wikilink1" title="cs-236:schedule">Schedule</a>.
+      If you find something missing on the sidebar menu, then please
+      contact the appropriate <a href="/cs-236/instructors" class="wikilink1" title="cs-236:instructors">instructor</a>
+      to add the item (one of the few areas of the wiki that is locked down).
+      Suggestions to improve this page are welcomed.
+    </p>
+
+    <p>
+    For course announcements, please see
+    <a href="http://learningsuite.byu.edu" class="urlextern" title="http://learningsuite.byu.edu" rel="nofollow">Learning Suite</a>.
+    </p>
+  </div>
+  `
 });
