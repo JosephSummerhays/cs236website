@@ -5,7 +5,7 @@ var tas = Vue.component('tas', {
     }
   },
   template: `
-<div>
+<div class="page">
   <p>
   Please review the <a href="/cs-236/ta-help-policy" class="wikilink1" title="cs-236:ta-help-policy">TA Help Policy</a> before visiting with any TA. Any concerns with the policy should be discussed in person with the instructor. TAs are located in the TA cubicles in the basement of the TMCB. Please submit to the <a href="https://students.cs.byu.edu/~cs236ta/helpqueue/" class="urlextern" title="https://students.cs.byu.edu/~cs236ta/helpqueue/" rel="nofollow">help queue</a> first to get in line if needed.
   </p>

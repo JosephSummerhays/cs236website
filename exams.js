@@ -5,7 +5,7 @@ var exams = Vue.component('exams', {
     }
   },
   template: `
-<div>
+<div class="page">
   <h2 class="sectionedit1" id="midterm-1-review-topics">Midterm 1 Review Topics</h2>
   <div class="level2">
 

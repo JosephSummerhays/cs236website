@@ -1,8 +1,8 @@
 :root {
   --backColor:#d2dbd6;
   --tint1:#e11f46;
-  --tint2:#8fcfd6;
-  --tint3:#040730;
+  --tint2:#040730;
+  --tint3:#8fcfd6;
   --numMenuItems:9;
   --pads:7px;
 }
@@ -29,6 +29,7 @@ nav li {
    margin:auto;
    width:calc(100%/var(--numMenuItems));
    text-align: center;
+   color: white;
 }
 
 /*Hover state for top level links*/
@@ -49,6 +50,37 @@ h1.title {
   width: calc(100%-2*var(--pads));
   padding: var(--pads);
   background-color: var(--tint2);
+  color:white;
   margin:0px;
   text-align: center;
+}
+.page {
+  width: 95%;
+  margin:auto;
+  margin-top:15px;
+}
+/*******************Schedule Page*************/
+.hwGrid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 6fr 3fr;
+}
+.dayGrid {
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.dayEl {
+  padding-top:10px;
+}
+tr, th, td {
+  border: 1px;
+  text-align: center;
+}
+
+/********************* Wiki Page********************/
+.question, .reply {
+  background-color: var(--tint3);
+  margin: auto;
+  width: 66%;
+  padding: 20px;
+  border-radius: 40px;
 }

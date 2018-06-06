@@ -5,7 +5,7 @@ var projects = Vue.component('projects', {
     }
   },
   template: `
-<div>
+<div class="page">
   <p>
   Please review the <a href="/cs-236/project-standards" class="wikilink1" title="cs-236:project-standards">project standards</a> and <a href="/cs-236/style-guide" class="wikilink1" title="cs-236:style-guide">style guide</a> which apply to all projects in the course and are strictly enforced.
   </p>

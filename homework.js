@@ -5,7 +5,7 @@ var homework = Vue.component('homework', {
     }
   },
   template: `
-<div>
+<div class="page">
   <p>
   Homework are intended to help prepare for quizzes, projects, midterms, and the final.  If you work the homework, then you are adequately prepared (in theory).  Please refer to <a href="http://learningsuite.byu.edu" class="urlextern" title="http://learningsuite.byu.edu" rel="nofollow">Learning Suite</a> for due dates. Also, please see the <a href="/cs-236/syllabus" class="wikilink1" title="cs-236:syllabus">Syllabus</a> for late policy, grade composition, and other details regarding homework.
   </p>

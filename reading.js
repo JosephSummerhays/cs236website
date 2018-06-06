@@ -5,7 +5,7 @@ var reading = Vue.component('reading', {
     }
   },
   template: `
-<div>
+<div class="page">
   <p>
   Exercises to consider in helping prepare for class (but not required or directly used in the course)
   </p>

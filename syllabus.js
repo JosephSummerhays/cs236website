@@ -4,7 +4,8 @@ var syllabus = Vue.component('syllabus', {
       //?????
     }
   },
-  template: `<div>
+  template: `
+<div class="page">
   <h2 class="sectionedit1" id="description">Description</h2>
   <div class="level2">
 
