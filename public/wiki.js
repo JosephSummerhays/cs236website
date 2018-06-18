@@ -55,9 +55,10 @@ Vue.component('question', {
     reply: function (){
       answer = {
         answer: this.newAnswer,
-        name: this.newName
+        name: this.newName,
+        id: this.index,
       };
-      qst[this.index].answers.push(answer)
+      axios.post('/reply', answer);
       this.newAnswer = "";
       this.newName = "";
     },
@@ -78,7 +79,7 @@ Vue.component('question', {
         <p>{{answer.answer}}</p>
         <p>answer posted by -- {{answer.name}}</p>
       </div>
-      <form v-on:submit.prevent="reply">
+      <form v-on:submit.prevent="reply(); $emit('update')">
         <textarea v-model="newAnswer" placeholder="enter your answer"></textarea>
         <br/>
         <input v-model="newName" placeholder="enter your name"></p>
@@ -104,10 +105,8 @@ Vue.component('wiki', {
     },
     getQuestions: function() {
       console.log("HELLO!!!!!!!");
-      let temp = this;
       axios.get("/question").then(response => {
         console.log(response.data[0]);
-        console.log(temp.questions);
         this.questions = response.data;
         // for (var i = 0; i < response.data.length; i++) {
         //   temp.questions[i] = response.data[i];
@@ -129,10 +128,11 @@ Vue.component('wiki', {
       question (one or two lines), but larger snippets of code will be removed.
     </p>
     <question-form v-on:update="getQuestions"></question-form>
-    <div v-for="question in questions">
+    <div v-for="(question, i) in questions">
       <question
+        v-on:update="getQuestions"
         v-bind:q="question"
-        v-bind:index="question"
+        v-bind:index="i"
         v-bind:show="false">
       </question>
     </div>

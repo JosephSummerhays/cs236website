@@ -24,7 +24,7 @@ var head = Vue.component('appHeader', {
       <ul id="menu">
         <li v-for="item in menuItems" v-on:click="linkTo(item.text)">{{item.text}}</li>
       </ul>
-    </nav>,`
+    </nav>`
 });
 var app = new Vue({
   el: '#app',
@@ -32,3 +32,43 @@ var app = new Vue({
     curPage:"Home",
   },
 });
+/*
+var app = new Vue({
+  el: '#app',
+  data: {
+    cookieNum: 0,
+  },
+  created: function() {
+    console.log("Hello?");
+    if (this.$cookies.isKey('cookieNum')) {
+      this.cookieNum = this.$cookies.get('cookieNum');
+      console.log("in the IF");
+      console.log(this.$cookies.get('cookieNum'));
+      console.log(this.cookieNum);
+    }
+    else {
+      this.$cookies.set('cookieNum', '5', 10);
+      console.log("in the ELSE");
+      console.log(this.$cookies.get('cookieNum'));
+      console.log(this.cookieNum);
+    }
+  },
+  methods: {
+    touch: function() {
+      console.log("Hello?");
+      if (this.$cookies.isKey('cookieNum')) {
+        this.cookieNum = this.$cookies.get('cookieNum');
+        console.log("in the IF");
+        console.log(this.$cookies.get('cookieNum'));
+        console.log(this.cookieNum);
+      }
+      else {
+        this.$cookies.set('cookieNum', '5', 10);
+        console.log("in the ELSE");
+        console.log(this.$cookies.get('cookieNum'));
+        console.log(this.cookieNum);
+      }
+    },
+  }
+});
+*/

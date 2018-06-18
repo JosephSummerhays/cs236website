@@ -32,11 +32,21 @@ app.post('/question', (request, response) => {
     summary:request.body.head,
     question: request.body.question,
     name: request.body.name,
-    answers: []
+    answers: [],
+    numAnswers: 0,
   });
   index++;
-  console.log(qst);
-  response.send(qst);
+});
+
+app.post('/reply', (request, response) => {
+  console.log(request.body);
+  console.log(qst[request.body.id]);
+  qst[request.body.id].answers.push({
+    answer: request.body.answer,
+    name: request.body.name,
+    id: qst[request.body.id].numAnswers,
+  });
+  qst[request.body.id].numAnswers += 1;
 });
 
 app.get("/question", (request, response) => {
