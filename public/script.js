@@ -30,6 +30,22 @@ var app = new Vue({
   el: '#app',
   data: {
     curPage:"Home",
+    studentName: "",
+    hasname: false,
+  },
+  created: function() {
+    console.log("Hello?");
+    if (this.$cookies.isKey('studentName')) {
+      this.studentName = this.$cookies.get('studentName');
+      this.hasname = true;
+    }
+  },
+  methods: {
+    nameSubmitted: function() {
+      this.hasname = true;
+      this.studentName = this.$cookies.get("studentName");
+      console.log("did it work? " + this.studentName);
+    }
   },
 });
 /*

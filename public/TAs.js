@@ -11,7 +11,7 @@ var tas = Vue.component('tas', {
   </p>
 
   <p>
-  You may also post questions in the “Digital Dialog” section of Learning Suite. TAs will monitor and answer questions posted there as time allows.
+    You may also post questions in the wiki. TAs will monitor and answer questions posted there as time allows.
   </p>
 
   <h1 class="sectionedit1" id="help-queue">Help Queue</h1>

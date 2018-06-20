@@ -7,19 +7,20 @@
     <app-header></app-header>
       <section>
         <h1 class="title">{{curPage}}</h1>
-        <home v-show = "curPage==='Home'"></home>
-        <syllabus v-show = "curPage==='Syllabus'"></syllabus>
-        <schedule v-show = "curPage==='Schedule'"></schedule>
-        <homework v-show = "curPage==='HomeWork'"></homework>
-        <projects v-show = "curPage==='Projects'"></projects>
-        <exams v-show = "curPage==='Exams'"></exams>
-        <reading v-show = "curPage==='Reading'"></reading>
-        <tas v-show = "curPage==='TAs'"></tas>
-        <wiki v-show = "curPage==='Wiki'"></wiki>
+        <home v-show="curPage==='Home'" v-bind:hasname="hasname" v-on:namesubmitted="nameSubmitted"></home>
+        <syllabus v-show="curPage==='Syllabus'"></syllabus>
+        <schedule v-show="curPage==='Schedule'"></schedule>
+        <homework v-show="curPage==='HomeWork'"></homework>
+        <projects v-show="curPage==='Projects'"></projects>
+        <exams v-show="curPage==='Exams'"></exams>
+        <reading v-show="curPage==='Reading'"></reading>
+        <tas v-show="curPage==='TAs'"></tas>
+        <wiki v-show="curPage==='Wiki'"></wiki>
       </section>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js" integrity="sha256-CMMTrj5gGwOAXBeFi7kNokqowkzbeL8ydAJy39ewjkQ=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue-cookies@1.5.5/vue-cookies.js"></script>
   <script src="./home.js"></script>
   <script src="./syllabus.js"></script>
   <script src="./TAs.js"></script>
