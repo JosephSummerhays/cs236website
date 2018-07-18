@@ -44,7 +44,6 @@ var app = new Vue({
     nameSubmitted: function() {
       this.hasname = true;
       this.studentName = this.$cookies.get("studentName");
-      console.log("did it work? " + this.studentName);
     }
   },
 });
